@@ -9,6 +9,10 @@ import org.optaplanner.core.api.domain.entity.PlanningEntity;
 import org.optaplanner.core.api.domain.lookup.PlanningId;
 import org.optaplanner.core.api.domain.variable.PlanningVariable;
 
+import java.time.DayOfWeek;
+import java.time.LocalTime;
+import java.time.Duration;
+
 @PlanningEntity
 @Entity
 public class Lesson {

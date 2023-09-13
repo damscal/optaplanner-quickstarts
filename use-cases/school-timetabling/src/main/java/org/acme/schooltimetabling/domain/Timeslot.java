@@ -2,12 +2,14 @@ package org.acme.schooltimetabling.domain;
 
 import java.time.DayOfWeek;
 import java.time.LocalTime;
+import java.time.Duration;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 import org.optaplanner.core.api.domain.lookup.PlanningId;
+
 
 @Entity
 public class Timeslot {
@@ -61,4 +63,7 @@ public class Timeslot {
         return endTime;
     }
 
+    public Duration getDuration() {
+        return Duration.between(startTime,endTime);
+    }
 }
